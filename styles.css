@@ -1,48 +1,101 @@
-/* color palette */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
-body {
-    background-color: #78CCCB;
-    font-family: 'Montserrat', sans-serif;
-    padding: 50px 0;
-  }
-  
-  main {
-    text-align: center;
-  }
-
-.grid-container {
-    display: inline-grid;
-    border: solid #FF5E5B;
-    border-width: 6px 100px 0;
-    grid-gap: 1px;
-    background-color: #AAAAAA;
+:root {
+  --color-blue: #0077b6;
+  --color-black: #333333;
+  --color-red: #ff5733;
 }
 
-#grid-container > div {
-    background-color: #D8D8D8;
-  }
-  
-  .small-grid {
-    grid-template-columns: repeat(22, auto);
-  }
-  .small-grid > div {
-    height: 39px;
-    width: 39px;
-  }
-  
-  .medium-grid-default {
-    grid-template-columns: repeat(44, auto);
-  }
-  .medium-grid-default > div {
-    height: 19px;
-    width: 19px;
-  }
-  
-  .big-grid {
-    grid-template-columns: repeat(88, auto);
-  }
-  .big-grid > div {
-    height: 9px;
-    width: 9px;
-  }
-  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-black);
+  background-color: lightcyan;
+  font-size: 1.6rem;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-blue);
+  font-size: 4rem;
+}
+
+main {
+  padding: 0 2vw;
+  display: flex;
+  justify-content: center;
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+}
+
+.controls h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--color-blue);
+}
+
+.controls {
+  background-color: #d4f1f4;
+  text-align: center;
+  padding: 2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.grid-size {
+  margin-bottom: 0.5rem;
+  color: var(--color-black);
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.apply,
+.reset {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--color-blue);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.grid-container {
+  border: 2px solid #d4f1f4;
+
+  width: 70rem;
+  height: 70rem;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.box {
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+
+}
+
+.box.active {
+  background-color: var(--color-blue);
+}
